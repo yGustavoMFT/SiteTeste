@@ -2,9 +2,12 @@
 body{
     background-color: rgb(166, 176, 199);
     overflow-x: hidden!important;
-
-
+    justify-content: center;
+    align-items: center;
+    min-width: 320px;
+    max-width: 1440px;
 }
+
 
 h1 {
     color: rgb(23, 31, 53);
@@ -67,12 +70,13 @@ p {
 }
 
 #box {
-    width: fill;
+    width: 500%;
     height: 3px;
     background-color: rgb(24, 23, 27);
     border-radius: 10px;
     margin-right: -10px;
     margin-left: -10px;
+    overflow: hidden;
 }
 
 .logo {
@@ -91,7 +95,8 @@ p {
 }
 .imgprincipal{
     background-image: none;
-    width: auto;
+    min-width: 320px;
+    max-width: 1440px;
     height: 350px;
     border-radius: 20px;
 
@@ -111,17 +116,33 @@ p {
 }
 span{
     text-decoration: solid;
-    color: rgb(46, 64, 114);
+    color: rgb(208, 214, 230);
+    font-family: Courier;
+    font-size: 50px;
 }
 #fotoprincipal{
     background-color: rgb(24, 23, 27);
     text-align: center;
-    background-size: contain;
+    background-size:fit-content;
+    background-repeat: no-repeat;
+    align-items: center;
+    margin:0 auto;
     background-image: url(../Imagens/fotohome.png);
-    height: 494px;
-    width: 110%;
-    margin-left: -10px;
-    padding-left: 0px;
+    height: 498px;
+    min-width: 320px;
+    max-width: 1440%;
+}
+#industriatextil{
+    background-color: rgb(24, 23, 27);
+    background-repeat: no-repeat;
+    background-image: url(../Imagens/indtxt.jpg);
+    background-position: center;
+    background-size: cover;
+    box-shadow: 2px 2px rgb(24, 23, 27); 
+    height: 400px;
+    margin-bottom: -80px;
+    width: 1000px;
+    margin-left: 13.5%;
 }
 .descimg{
     padding-top: 0px;
@@ -133,8 +154,8 @@ span{
     table-layout: auto;
     border: 0px;
     width: 100%;
-    padding: 10px;
-    column-count: 5;
+    padding: 0px;
+    column-count: 3;
     column-gap: 30px;
     column-rule-style: solid;
     column-rule-width: 1px;
@@ -159,6 +180,9 @@ span{
     background-color: rgba(28, 28, 34, 0.904);
 }
 /*Slideshow*/
+.sliderslide{
+    display:none;
+}
 .slide{
     width: 20%;
     transition: .6s;
@@ -195,12 +219,45 @@ span{
     transform: translate(-50%);
     display: flex;
 }
+.fundopreto{
+    border-radius: 1px;
+    width: 2000px;
+    margin-left: -10px;
+    height: 550px;
+    margin-bottom: -20px;
+    justify-content: center;
+    overflow: hidden;
+    background-color: rgb(24, 23, 27);
+}
+
+.fundopreto2{
+    border-radius: 1px;
+    width: 2000px;
+    margin-left: -72px;
+    height: fill;
+    margin-bottom: -20px;
+    justify-content: center;
+    overflow: hidden;
+    background-color: rgb(24, 23, 27);
+}
+.fundopreto3{
+    border-radius: 1px;
+    width: 2000px;
+    margin-left: -10px;
+    height: 498px;
+    margin-bottom: -20px;
+    justify-content: center;
+    overflow: hidden;
+    background-color: rgb(24, 23, 27);
+}
 .content{
     height: 520px;
     width: 920px;
     border-radius: 20px;
     overflow: hidden;
     transform: translate(25%);
+    margin-top: 15px;
+    background-color: rgb(24, 23, 27);
 }
 .bar{
     width: 70px;
@@ -213,9 +270,6 @@ span{
 }
 .bar:hover{
     background-color: rgba(132, 161, 240, 0.644);
-}
-input{
-    display: none;
 }
 
 /*Cards*/
@@ -252,15 +306,16 @@ article{
 .container .card h4{
     color: rgb(23, 31, 53);
     font-family: Cambria;
-    font-size: 20px;
+    font-size: 15px;
 }
 .container .card .info{
     padding: 20px;
+    height: 350px;
     text-align: center;
 }
 .container .card .info p{
     color: rgb(76, 79, 92);
-    font-size: 15px; 
+    font-size: 13.5px; 
 }
 .container .card .info a{
     position: relative;
@@ -282,8 +337,300 @@ article{
     border-color: rgb(132, 161, 240);
 }
 .container .card:hover .info p{
-    filter: invert(1);
+
+    color: rgb(23, 31, 53);
 }
 .container .card:hover h4{
     filter: invert(1);
+}
+/*Informativos*/
+.txtinf {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-color: rgb(24, 23, 27);
+}
+.textoinf {
+    text-align: center;
+    padding: 10px;
+    height: 250px;
+    width: 1250px;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-left: 10px;
+    border-color: rgb(24, 23, 27);
+    border-style: solid;
+    color: rgb(208, 214, 230);
+    background-color: rgb(134, 142, 161);
+    
+}
+.tituloinf {
+    padding: 3px;
+    font-size: 30px;
+    margin-right: 20px;
+    justify-content: center;
+    padding-top: 50px;
+    color: rgb(76, 79, 92);
+}
+/*Informativos2*/
+.txtinf2{
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-color: rgb(24, 23, 27);
+
+}
+.textoinf2{
+    text-align: center;
+    padding: 10px;
+    height: 250px;
+    width: 1250px;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-left: 10px;
+    border-color: rgb(24, 23, 27);
+    border-style: solid;
+    color: rgb(208, 214, 230);
+    background-color: rgb(134, 142, 161);
+}
+.tituloinf2{
+    padding: 3px;
+    font-size: 30px;
+    margin-right: 20px;
+    justify-content: center;
+    padding-top: 50px;
+    color: rgb(76, 79, 92);
+}
+.imgintegrante{
+    height: 250px;
+    margin-top: -45px;
+    border-radius: 10px;
+    border-color: rgb(24, 23, 27);
+    border-style: solid;
+}
+/*Formulário de contato*/
+.form{
+    display: flex;
+    flex-direction: column;
+}
+.field{
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px;
+    border-radius: 5px;
+}
+.contato{
+    width: 100%;
+    max-width: 500px;
+}
+textarea{
+    height: 150px;
+}
+.conteudo{
+    display: flex;
+    justify-content: left;
+    padding: 10px;
+    float: left;
+}
+.Enviar{
+    color: rgb(24, 23, 27);
+    border-color: rgb(24, 23, 27);
+    background-color:rgba(132, 161, 240, 0);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    
+}
+.Enviar:hover{
+    background-color: rgb(132, 161, 240);
+    color: white;
+    margin-top: -1px;
+    margin-bottom: 20px;
+    box-shadow: 2px 20px 25px rgb(132, 161, 240);
+    border-color: rgb(132, 161, 240);
+}
+.txtfrm{
+    justify-content: center;
+    background-color: rgb(134, 142, 161);
+    width: 80%;
+    margin-left: 280px;
+    height: 369px;
+    padding: 10px;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-color: rgb(24, 23, 27);
+
+}
+.textoform{
+    text-align: left;
+    padding: 10px;
+    color: rgb(166, 176, 199);
+}
+.tituloform{
+    padding: 3px;
+    color: rgb(76, 79, 92);
+}
+.textoprincipal{
+    border-color: rgb(24, 23, 27);
+    background-color: rgb(148, 163, 196);
+    background-size:cover;
+    box-shadow: 2px 2px rgb(24, 23, 27); 
+    color: rgb(208, 214, 230);
+    padding: 30px;
+    text-decoration:solid;
+    margin-top: -22px;
+    width: 940px;
+    text-align: center;
+    border-bottom-left-radius: 10px; 
+    border-bottom-right-radius: 10px;
+    margin-left: 13.5%;
+}
+.tituloprincipal2{
+    border-color: rgb(24, 23, 27);
+    color: rgb(208, 214, 230);
+    padding: 10px;
+    width: 980px;
+    background-color: rgb(23, 31, 53);
+    box-shadow: 2px 2px rgb(24, 23, 27); 
+    background-size:cover;
+    text-align: center; 
+    margin-bottom: -4px;
+    border-bottom-left-radius: 0px; 
+    border-bottom-right-radius: 0px;
+    margin-left: 13.5%;
+}
+.tituloprincipal3{
+    border-color: rgb(24, 23, 27);
+    color: rgb(24, 23, 27);
+    padding: 10px;
+    width: 980px;
+    background-color: rgb(24, 23, 27);
+    box-shadow: 2px 2px rgb(24, 23, 27); 
+    background-size:cover;
+    text-align: center; 
+    margin-bottom: -4px;
+    border-bottom-left-radius: 0px; 
+    border-bottom-right-radius: 0px;
+    margin-left: 13.5%;
+}
+
+.tituloprincipal{
+    border-color: rgb(24, 23, 27);
+    color: rgb(208, 214, 230);
+    padding: 5px;
+    width: 400px;
+    text-shadow: 2px 2px rgb(24, 23, 27);
+    background-color: rgba(132, 161, 240, 0.315);
+    box-shadow: 2px 2px rgb(24, 23, 27); 
+    background-size:cover;
+    text-align: center; 
+    border-bottom-left-radius: 0px; 
+    border-bottom-right-radius: 0px;
+    margin-left: 13.5%;
+}
+.tituloprincipal4{
+    border-color: rgb(24, 23, 27);
+    color: rgb(208, 214, 230);
+    padding: 5px;
+    width: 400px;
+    text-shadow: 2px 2px rgb(24, 23, 27);
+    background-color: rgba(132, 161, 240, 0.315);
+    box-shadow: 2px 2px rgb(24, 23, 27); 
+    background-size:cover;
+    text-align: center; 
+    border-bottom-left-radius: 0px; 
+    border-bottom-right-radius: 0px;
+    margin-left: 43%;
+}
+.imgsprd{
+    align-items: center;
+    margin:auto;
+    text-align: center;
+}
+.textoprincipal5{
+    border-color: rgb(24, 23, 27);
+    background-color: rgb(24, 23, 27);
+    background-size:cover;
+    box-shadow: 2px 2px rgb(24, 23, 27); 
+    color: rgb(208, 214, 230);
+    padding: 30px;
+    text-decoration:solid;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    width: 940px;
+    text-align: center;
+    border-bottom-left-radius: 10px; 
+    border-bottom-right-radius: 10px;
+    margin-left: 13.5%;
+}
+/*DOAR*/
+.txtdoar{
+    justify-content: center;
+    display: flex;
+    border-color: rgb(24, 23, 27);
+    border-style: solid;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+
+}
+.textoinf{
+    text-align: left;
+    padding: 10px;
+    height: 250px;
+    width: 1250px;
+    font-size: 20px;
+    color: rgb(208, 214, 230);
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-left: 20px;
+    border-color: rgb(24, 23, 27);
+    border-style: solid;
+    background-color: rgb(134, 142, 161);
+    
+}
+.tituloinf{
+    font-size: 30px;
+    margin-left: 20px;
+    padding: 3px;
+    padding-top: 50px;
+    color: rgb(76, 79, 92);
+}
+.botaodoar{
+    font-size: 30px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border-color: rgb(76, 79, 92);
+    border-style: solid;
+    background-position: center;
+    color: rgb(76, 79, 92);
+}
+.botaodoar:hover{
+    font-size: 30px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border-color: rgb(208, 214, 230);
+    box-shadow: 2px 2px 25px rgb(208, 214, 230);
+    
+    border-style: solid;
+    background-position: center;
+    color: rgb(208, 214, 230);
+}
+.imgong{
+    margin-top: -40px;
+}
+
+.linkador{
+    align-items: center;
+    margin-left: 41.5%;
 }
